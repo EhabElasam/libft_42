@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: eelasam <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/16 18:43:56 by eelasam           #+#    #+#             */
-/*   Updated: 2022/10/16 18:51:26 by eelasam          ###   ########.fr       */
+/*   Created: 2022/10/21 11:03:35 by eelasam           #+#    #+#             */
+/*   Updated: 2022/10/21 11:39:28 by eelasam          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,28 +14,16 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	int			i;
-	int			y;
-	const char	*p;
+	int	i;
 
 	i = 0;
-	y = 0;
-	while (s[i] != '\0')
-	{
-		if (s[i] == c)
-		{
-			p = &s[i];
-			y++;
-		}
+	while (s[i])
 		i++;
-	}
-	if (c == '\0')
+	while (i >= 0)
 	{
-		p = &s[i];
-		return ((char *)p);
+		if (s[i] == (char)c)
+			return ((char *)(s + i));
+		i--;
 	}
-	if (y == 0)
-		return (0);
-	else
-		return ((char *)p);
+	return (NULL);
 }
