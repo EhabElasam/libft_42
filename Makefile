@@ -6,7 +6,7 @@
 #    By: eelasam <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/07 11:50:56 by eelasam           #+#    #+#              #
-#    Updated: 2022/10/22 13:34:44 by eelasam          ###   ########.fr        #
+#    Updated: 2022/10/24 17:57:51 by eelasam          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -40,6 +40,10 @@ SRC = ft_isalpha.c\
 	ft_putchar_fd.c\
 	ft_putendl_fd.c\
 	ft_putstr_fd.c\
+	ft_putnbr_fd.c\
+	ft_strtrim.c\
+	ft_strmapi.c\
+	ft_striteri.c\
 
 
 OBJECTS = ${SRC:.c=.o}
