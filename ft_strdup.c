@@ -22,7 +22,7 @@ char	*ft_strdup(const char *s)
 	y = 0;
 	while (s[y] != '\0')
 		y++;
-	p = malloc (y + 1);
+	p = malloc(y + 1);
 	if (p == NULL)
 		return (0);
 	while (s[i] != '\0')
