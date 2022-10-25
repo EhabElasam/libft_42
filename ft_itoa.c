@@ -27,6 +27,7 @@ static char	*ft_zero(void)
 static char	*ft_negative(int i, int n)
 {
 	char	*p;
+
 	p = (char *)malloc(sizeof(char) * (i + 2));
 	if (!p)
 		return (0);
@@ -44,6 +45,7 @@ static char	*ft_negative(int i, int n)
 static char	*ft_positive(int i, int n)
 {
 	char	*p;
+
 	p = (char *)malloc(sizeof(char) * (i + 1));
 	if (!p)
 		return (0);
@@ -59,8 +61,8 @@ static char	*ft_positive(int i, int n)
 
 char	*ft_itoa(int n)
 {
-	int	i;
-	int	y;
+	int		i;
+	int		y;
 	char	*p;
 
 	i = 0;
@@ -70,7 +72,7 @@ char	*ft_itoa(int n)
 		i++;
 		y = y / 10;
 	}
-	if (n ==0)
+	if (n == 0)
 		p = ft_zero();
 	if (n < 0)
 		p = ft_negative(i, n);
@@ -80,5 +82,4 @@ char	*ft_itoa(int n)
 		return (NULL);
 	else
 		return (p);
-
 }

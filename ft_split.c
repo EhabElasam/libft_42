@@ -40,19 +40,18 @@ static int	ft_alp_size(char const *s, char c, int i)
 	size = 0;
 	while (s[i] != c && s[i])
 	{
-		size ++;
+		size++;
 		i++;
 	}
 	return (size);
-
 }
 
 char	**ft_split(char const *s, char c)
 {
-	int	i;
-	int	alp;
-	int	size;
-	int	y;
+	int		i;
+	int		alp;
+	int		size;
+	int		y;
 	char	**str;
 
 	i = 0;
