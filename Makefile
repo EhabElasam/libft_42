@@ -6,7 +6,7 @@
 #    By: eelasam <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/07 11:50:56 by eelasam           #+#    #+#              #
-#    Updated: 2022/10/24 17:57:51 by eelasam          ###   ########.fr        #
+#    Updated: 2022/10/28 15:16:19 by eelasam          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -44,9 +44,17 @@ SRC = ft_isalpha.c\
 	ft_strtrim.c\
 	ft_strmapi.c\
 	ft_striteri.c\
+	ft_itoa.c\
+	ft_split.c\
 
+SRCB = ft_lstnew.c\
+	ft_lstadd_front.c\
+	ft_lstsize.c\
+	ft_lstlast.c\
 
 OBJECTS = ${SRC:.c=.o}
+
+OBJECTSB = ${SRCB:.c=.o}
 
 CFLAGS = -Wall -Wextra -Werror
 
@@ -55,12 +63,17 @@ $(NAME): all
 all:
 	cc -c $(CFLAGS) $(SRC)
 	ar -rcs $(NAME) $(OBJECTS)
+
+bonus:
+	cc -c $(CFLAGS) $(SRCB)
+	ar -rcs $(NAME) $(OBJECTSB)
+
 clean:
-	rm -f $(OBJECTS)
+	rm -f $(OBJECTS) $(OBJECTSB)
 fclean: clean
 	rm -f $(NAME)
 re: fclean all
 
 so:
-	cc -nostartfiles -fPIC $(CFLAGS) $(SRC)
-	gcc -nostartfiles -shared -o libft.so $(OBJECTS)
+	cc -nostartfiles -fPIC $(CFLAGS) $(SRC) $(BONUS)
+	gcc -nostartfiles -shared -o libft.so $(OBJECTS) $(OBJECTSB)
