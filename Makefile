@@ -6,7 +6,7 @@
 #    By: eelasam <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/07 11:50:56 by eelasam           #+#    #+#              #
-#    Updated: 2022/10/28 15:16:19 by eelasam          ###   ########.fr        #
+#    Updated: 2022/10/31 11:05:08 by eelasam          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -51,6 +51,9 @@ SRCB = ft_lstnew.c\
 	ft_lstadd_front.c\
 	ft_lstsize.c\
 	ft_lstlast.c\
+	ft_lstadd_back.c\
+	ft_lstdelone.c\
+	ft_lstclear.c\
 
 OBJECTS = ${SRC:.c=.o}
 

@@ -18,7 +18,7 @@ static char	*ft_zero(void)
 
 	p = (char *)malloc(sizeof(char) * (2));
 	if (!p)
-		return (0);
+		return (NULL);
 	p[0] = '0';
 	p[1] = '\0';
 	return (p);
